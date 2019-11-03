@@ -1,0 +1,20 @@
+#注意yaml语法，key: value value和前面的':’之间必须有空格
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: dev #激活dev环境的文档库，如果不激活则默认使用上面的8081端口号
+
+
+#---文档块，可以根据idea下面的提示Document 1/2来查看当前是第几个文档块
+---
+server:
+  port: 8082
+spring:
+  profiles: dev
+---
+server:
+  port: 8083
+spring:
+  profiles: prod
